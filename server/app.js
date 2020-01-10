@@ -25,7 +25,8 @@ app.use('/classes', router);
 
 // Serve the client files
 console.log('path to client', __dirname + '/../client');
-app.use(express.static('client'));
+app.use(express.static(__dirname + '/../client'));
+app.use('/node_modules', express.static(__dirname + '/../node_modules'));
 
 // If we are being run directly, run the server.
 if (!module.parent) {
