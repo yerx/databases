@@ -11,18 +11,21 @@
   "scripts": {
     "postinstall": "curl -s https://raw.githubusercontent.com/reactorcore/pomander/master/bin/install | bash",
     "start": "node ./server/app.js",
-    "start:es6": "babel-node ./server/app.js",
+    "es6": "babel-node ./server/app.js",
     "test": "mocha server/spec/server-spec.js; RES=$?; kill %1; exit $RES",
     "test:es6": "mocha --compilers js:babel-register server/spec/server-spec.js; RES=$?; kill %1; exit $RES",
     "lint": "eslint ./"
   },
   "dependencies": {
     "body-parser": "1.19.0",
+    "cors": "^2.8.5",
     "express": "4.17.1",
+    "jquery": "^3.3.1",
     "morgan": "1.9.1",
-    "mysql": "2.17.1",
+    "mysql": "^2.17.1",
     "request": "2.88.0",
-    "sequelize": "5.21.2"
+    "sequelize": "5.21.2",
+    "underscore": "^1.9.2"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
