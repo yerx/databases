@@ -24,7 +24,6 @@ app.use(parser.json());
 app.use('/classes', router);
 
 // Serve the client files
-console.log('path to client', __dirname + '/../client');
 app.use(express.static(__dirname + '/../client'));
 app.use('/node_modules', express.static(__dirname + '/../node_modules'));
 

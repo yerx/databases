@@ -11,7 +11,10 @@ module.exports = {
       });
     }, // a function which handles a get request for all messages
     post: function (req, res) {
-      var params = [ req.body.username, req.body.roomname, req.body.text];
+      var params = [
+        req.body.text,
+        req.body.username,
+        req.body.roomname];
       models.messages.post(params, function(err, results) {
         if (err) {
           console.error(err);
