@@ -11,7 +11,7 @@ module.exports = {
       });
     }, // a function which handles a get request for all messages
     post: function (req, res) {
-      var params = [req.body.message_body, req.body.user_name, req.body.room_name];
+      var params = [ req.body.username, req.body.roomname, req.body.text];
       models.messages.post(params, function(err, results) {
         if (err) {
           console.error(err);
@@ -32,11 +32,13 @@ module.exports = {
       });
     },
     post: function (req, res) {
-      var params = [req.body.user_name];
+      var params = [req.body.username];
+      console.log('params', params);
       models.users.post(params, function(err, results) {
         if (err) {
           console.error(err);
         }
+        // console.log('paras', params);
         res.sendStatus(201);
       });
     }

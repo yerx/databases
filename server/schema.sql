@@ -1,19 +1,18 @@
-CREATE DATABASE chat;
+CREATE DATABASE chatter;
 
-USE chat;
+USE chatter;
 
 CREATE TABLE messages (
-  id INTEGER,
-  user_id INTEGER,
-  room_name TEXT,
-  message_body TEXT,
-  PRIMARY KEY (id)
+  id int NOT NULL AUTO_INCREMENT,
+  userid int NOT NULL, text varchar(200) NOT NULL,
+  roomname varchar(20),
+  PRIMARY KEY (ID)
 );
 
 CREATE TABLE users (
-  id INTEGER,
-  user_name TEXT,
-  PRIMARY KEY (id)
+  id int NOT NULL AUTO_INCREMENT,
+  username varchar(40) NOT NULL,
+  PRIMARY KEY (ID)
 );
 
 
