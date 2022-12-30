@@ -33,7 +33,7 @@
     "babel-register": "6.26.0",
     "chai": "4.2.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
-    "mocha": "6.2.2"
+    "mocha": "10.2.0"
   },
   "babel": {
     "presets": [
